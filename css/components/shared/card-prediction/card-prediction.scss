@@ -7,15 +7,13 @@
   border: 1px solid;
   border-bottom: 3px solid;
   flex-shrink: 0;
-  background-color: var(--colors-backgroundAlt);
-
   &--live {
     animation: 3s ease 0s infinite normal none running borderColor;
   }
   &--next {
     width: 100%;
     border: none;
-    background-color: var(--colors-backgroundAlt);
+    background-color: white;
     &::after {
       content: "";
       position: absolute;
@@ -24,8 +22,8 @@
       bottom: -3px;
       left: -1px;
       background: linear-gradient(
-        var(--colors-secondary) calc(37px + 1px),
-        var(--colors-cardBorder) calc(37px + 1px)
+        #7645d9 calc(37px + 1px),
+        #e7e3eb calc(37px + 1px)
       );
       border-radius: 24px;
       z-index: -2;
@@ -33,14 +31,14 @@
   }
   &--expired {
     opacity: 0.7;
-    border-color: var(--colors-cardBorder);
+    border-color: #e7e3eb;
     font-weight: 400;
     &:hover {
       opacity: 1;
     }
   }
   &--later {
-    border-color: var(--colors-cardBorder);
+    border-color: #e7e3eb;
     overflow: hidden;
   }
   &--flipped {
@@ -78,16 +76,15 @@
     transform: rotateY(180deg);
     backface-visibility: hidden;
     height: 100%;
-    border: 1px solid var(--colors-cardBorder);
-    border-bottom: 3px solid var(--colors-cardBorder);
+    border: 1px solid #e7e3eb;
+    border-bottom: 3px solid #e7e3eb;
     border-radius: 24px;
     overflow: hidden;
-    background: var(--colors-backgroundAlt);
     &__header {
       padding: 16px;
       display: flex;
       justify-content: space-between;
-      background: var(--colors-gradientCardHeader);
+      background: linear-gradient(111.68deg, #f2ecf2, #e8f2f6);
     }
     &__enter {
       display: flex;
@@ -133,7 +130,7 @@
       padding: 4px;
       background-color: transparent;
       svg {
-        fill: var(--colors-text);
+        fill: #280d5f;
         flex-shrink: 0;
       }
     }
@@ -141,10 +138,11 @@
       font-size: 20px;
       font-weight: 600;
       line-height: 1.1;
-      color: var(--colors-text);
+      color: #280d5f;
     }
     &__body {
       padding: 24px;
+      background-color: white;
       flex-grow: 1;
     }
     &__entry-container {
@@ -154,7 +152,7 @@
       margin-bottom: 8px;
     }
     &__commit {
-      color: var(--colors-textSubtle);
+      color: #7a6eaa;
       font-weight: 400;
       line-height: 1.5;
       font-size: 16px;
@@ -163,7 +161,7 @@
       display: flex;
       align-items: center;
       gap: 4px;
-      color: var(--colors-text);
+      color: #280d5f;
       font-weight: 600;
       line-height: 1.5;
       text-transform: uppercase;
@@ -171,23 +169,23 @@
     }
     &__input {
       padding: 8px 16px;
-      border: 1px solid var(--colors-inputSecondary);
-      background-color: var(--colors-input);
+      border: 1px solid #d7caec;
+      background-color: #eeeaf4;
       border-radius: 16px;
       box-shadow: inset 0px 2px 2px -1px rgba(74, 74, 104, 0.1);
       margin-bottom: 34px;
       input {
         border: none;
-        background-color: var(--colors-backgroundDisabled);
+        background-color: #e9eaeb;
         font-size: 16px;
-        color: var(--colors-text);
+        color: #280d5f;
         height: 40px;
         outline: 0px;
         width: 100%;
         text-align: right;
         cursor: not-allowed;
         &::placeholder {
-          color: var(--colors-textSubtle);
+          color: #7a6eaa;
           font-size: 16px;
         }
       }
@@ -209,7 +207,7 @@
       align-items: center;
       border: 0px;
       border-radius: 16px;
-      background-color: var(--colors-backgroundDisabled);
+      background-color: #e9eaeb;
       color: #bdc2c4;
       cursor: not-allowed;
       display: inline-flex;
@@ -232,7 +230,7 @@
     &__wallet {
       width: 100%;
       border: none;
-      color: var(--colors-invertedContrast);
+      color: white;
       background-color: #1fc7d4;
       font-size: 16px;
       font-weight: 600;
@@ -253,7 +251,7 @@
       }
     }
     &__warning {
-      color: var(--colors-textSubtle);
+      color: #7a6eaa;
       font-weight: 400;
       font-size: 12px;
       line-height: 1;
@@ -266,17 +264,16 @@
     padding: 6.5px 16px;
     max-height: 37px;
     &--expired {
-      background-color: var(--colors-cardBorder);
+      background-color: #e7e3eb;
       padding: 8px;
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
     }
     &--next {
-      background-color: var(--colors-secondary);
+      background-color: #7645d9;
       border-top-right-radius: 20px;
       border-top-left-radius: 20px;
       padding: 8px;
-
       .card-prediction {
         &__state {
           svg {
@@ -290,7 +287,7 @@
       }
     }
     &--later {
-      background-color: var(--colors-cardBorder);
+      background-color: #e7e3eb;
       padding: 8px;
     }
   }
@@ -340,7 +337,7 @@
     width: 100%;
     padding: 16px;
     border-radius: 16px;
-    background-color: var(--colors-backgroundAlt);
+    background-color: white;
     &--up {
       border: 2px solid#31d0aa;
     }
@@ -352,7 +349,7 @@
       border-radius: 14px;
     }
     &--later {
-      border: 2px solid var(--colors-cardBorder);
+      border: 2px solid #e7e3eb;
     }
   }
   &__enter-btn {
@@ -382,7 +379,7 @@
     }
   }
   &__price-type {
-    color: var(--colors-textSubtle);
+    color: #7a6eaa;
     font-weight: 600;
     line-height: 1.5;
     margin-bottom: 8px;
@@ -424,7 +421,7 @@
     text-decoration-line: underline;
     text-decoration-thickness: initial;
     text-decoration-style: dotted;
-    text-decoration-color: var(--colors-textSubtle);
+    text-decoration-color: #7a6eaa;
     text-underline-offset: 0.1em;
     position: relative;
     &--up {
@@ -477,7 +474,7 @@
     }
   }
   &__locked-price {
-    color: var(--colors-text);
+    color: #280d5f;
     font-weight: 400;
     line-height: 1.5;
     font-size: 14px;
@@ -508,12 +505,12 @@
     gap: 4px;
   }
   &__multiplier {
-    color: var(--colors-textSubtle);
+    color: #7a6eaa;
     font-weight: 600;
     line-height: 1;
     font-size: 14px;
     &--name {
-      color: var(--colors-textSubtle);
+      color: #7a6eaa;
       font-weight: 400;
       font-size: 14px;
     }
@@ -523,7 +520,7 @@
     align-items: center;
     gap: 4px;
     svg {
-      fill: var(--colors-secondary);
+      fill: #7645d9;
     }
     &--expired {
       svg {
@@ -532,11 +529,11 @@
     }
     &--later {
       svg {
-        fill: var(--colors-text);
+        fill: #280d5f;
       }
     }
     &-name {
-      color: var(--colors-secondary);
+      color: #7645d9;
       font-weight: 600;
       font-size: 16px;
       line-height: 21px;
@@ -549,13 +546,13 @@
         font-weight: 400;
       }
       &--later {
-        color: var(--colors-text);
+        color: #280d5f;
         font-weight: 400;
       }
     }
   }
   &__number {
-    color: var(--colors-secondary);
+    color: #7645d9;
     font-weight: 400;
     line-height: 1.5;
     font-size: 14px;
@@ -564,7 +561,7 @@
       font-size: 12px;
     }
     &--later {
-      color: var(--colors-textSubtle);
+      color: #7a6eaa;
       font-size: 12px;
     }
   }
@@ -578,17 +575,17 @@
       position: absolute;
       height: 100%;
       width: 0%;
-      background-color: var(--colors-secondary);
+      background-color: #7645d9;
     }
   }
   &__prize-pool {
-    color: var(--colors-text);
+    color: #280d5f;
     font-weight: 600;
     line-height: 1.5;
     font-size: 16px;
   }
   &__entry-start {
-    color: var(--colors-text);
+    color: #280d5f;
     font-weight: 600;
     line-height: 1.5;
     font-size: 16px;
@@ -596,7 +593,7 @@
   }
   &__entry-timer {
     display: block;
-    color: var(--colors-text);
+    color: #280d5f;
     font-weight: 600;
     line-height: 1.5;
     width: 100%;
@@ -607,12 +604,12 @@
 
 @keyframes borderColor {
   0% {
-    border-color: var(--colors-secondary);
+    border-color: #7645d9;
   }
   50% {
     border-color: #1fc7d4;
   }
   100% {
-    border-color: var(--colors-secondary);
+    border-color: #7645d9;
   }
 }
